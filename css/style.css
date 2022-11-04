@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.fundo{
+    background-image: linear-gradient(45deg,black, rgb(151, 151, 151));
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.teclado{
+    position: absolute;
+    background-image: linear-gradient(45deg,black, rgb(255, 255, 255));
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    border-color: black;
+    padding: 50px;
+}
+.botao{
+    border-color: rgba(173, 173, 173, 0.39);
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+    font-size: 15px;
+    color: rgb(1, 56, 104);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botao::before{
+    content: '';
+    position: absolute;
+    border-radius: 30px;
+    width: 30px;
+    height: 53px;
+    background: linear-gradient(rgb(0, 162, 255), rgb(34, 0, 158));
+    z-index: -100;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#apagar{
+    width: 103px;
+}
+#zero{
+    width: 155px;
+}
+#result{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 30px;
+    padding-bottom: 10px;
+    color: rgb(0, 130, 170);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+}
+.digitos{
+    padding-top: 10px;
+}
